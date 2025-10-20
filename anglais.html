@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anglais</title>
+  <link rel="stylesheet" href="anglais.css" />
+<script>
+  document.getElementById("toggle-mode").addEventListener("click", function() {
+    document.body.classList.toggle("nuit");
+    this.classList.toggle("nuit");
+    this.textContent = this.classList.contains("nuit") ? "☀️" : "🌙";
+  });
+</script>
+</head>
+<body>
+<div id="app">
+    <button type="button" class="toggle-btn" id="toggle-mode">🌙</button>
+    <h1>Entraînement Français ↔ Anglais</h1>
+    <div id="controls">
+      <label for="mode">Mode :</label>
+      <select id="mode">
+        <option value="fr-en">Français → Anglais</option>
+        <option value="en-fr">Anglais → Français</option>
+        <option value="fr-en-random">Français → Anglais (Ordre Aléatoire)</option>
+        <option value="random">Aléatoire</option>
+      </select>
+      <button id="start">Commencer</button>
+    </div>
+    <div id="game" class="hidden">
+      <div id="word-stats" class="hidden"></div>
+      <div id="quiz" class="hidden">
+      <p id="question"></p>
+      <input type="text" id="answer" placeholder="Votre réponse..." autofocus />
+      <button id="validate">Valider</button>
+      <p id="feedback"></p>
+</div>
+  </div>
+    <div id="onglet-anglais">
+    <li><a href="anglais.html">Vocabulaire Hippies et Punks</a></li>
+    <li><a href="anglais2.html">Verbes Irréguliers</a></li>
+  </div>
+</div> 
+    <a href="../index.html" class="back-button">🏠</a>
+  </div>
+<script src="anglais.js"></script>
+</body>
+</html>
