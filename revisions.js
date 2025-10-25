@@ -1,3 +1,16 @@
+// Fonction pour détecter si nous sommes sur Vercel
+function isVercel() {
+    return window.location.hostname.includes('vercel.app');
+}
+
+// Fonction pour mettre à jour le lien du bouton home
+function updateHomeButton() {
+    const homeButton = document.querySelector('.back-button');
+    if (homeButton && isVercel()) {
+        homeButton.href = 'https://accueil-loris.vercel.app';
+    }
+}
+
 function toggleMode() {
     const btn = document.getElementById("toggle-mode");
     const h2 = document.querySelector("h2");
@@ -21,4 +34,9 @@ function toggleMode() {
         localStorage.setItem("modeNuit", isNuit);
     });
 }
-toggleMode();
+
+// Initialiser quand la page est chargée
+document.addEventListener('DOMContentLoaded', () => {
+    toggleMode();
+    updateHomeButton();
+});
