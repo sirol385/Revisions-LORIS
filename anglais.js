@@ -44,15 +44,6 @@ const wordStats = document.getElementById("word-stats");
 modeSelect.addEventListener("change", () => {
   const titre = document.querySelector("h1");
   const selectedMode = modeSelect.value;
-  if (selectedMode === "fr-en") {
-    titre.textContent = "Entraînement Français → Anglais";
-  } else if (selectedMode === "en-fr") {
-    titre.textContent = "Entraînement Anglais → Français";
-  } else if (selectedMode === "random") {
-    titre.textContent = "Entraînement Aléatoire";
-  } else if (selectedMode === "fr-en-random") {
-    titre.textContent = "Entraînement Français → Anglais (Ordre Aléatoire)";
-  }
 });
 startBtn.addEventListener("click", () => {
   mode = modeSelect.value;
