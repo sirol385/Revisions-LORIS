@@ -188,7 +188,7 @@ p.nuit{
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   transition: var(--transition);
   z-index: 1500;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -196,5 +196,5 @@ p.nuit{
 .back-button:hover {
   background-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
