@@ -263,3 +263,16 @@ function toggleMode() {
     });
 }
 toggleMode();
+function isVercel() {
+    return window.location.hostname.includes('vercel.app');
+}
+function updateHomeButton() {
+    const homeButton = document.querySelector('.back-button');
+    if (homeButton && isVercel()) {
+        homeButton.href = 'https://accueil-loris.vercel.app';
+    }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    toggleMode();
+    updateHomeButton();
+});
