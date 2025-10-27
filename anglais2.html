@@ -31,15 +31,42 @@
   </div>
     <div>
     <a href="../Accueil-LORIS/index.html" class="back-button">🏠</a>
-    <a href="anglais2.html" class="retour-button">⬅️</a>
+    <a href="index.html" class="retour-button">⬅️</a>
     </div> 
 </div>
   </div>
     <div id="onglet-anglais">
     <li><a href="anglais.html">Vocabulaire Hippies et Punks</a></li>
     <li><a href="anglais2.html">Verbes Irréguliers</a></li>
+    <script src="anglais2.js"></script>
+    <script>
+    (function(){
+        const backBtn = document.querySelector('.retour-button');
+        const controls = document.querySelector('#controls');
+        const game = document.querySelector('#game');
+        const quiz = document.querySelector('#quiz');
+        const wordStats = document.querySelector('#word-stats');
+        const startBtn = document.querySelector('#start');
+        function isVisible(el) {
+            return el && !el.classList.contains('hidden');
+        }
+        if (!backBtn) return;
+        backBtn.addEventListener('click', function(e) {
+            if (isVisible(game) || isVisible(quiz) || isVisible(wordStats)) {
+                e.preventDefault();
+                controls.classList.remove('hidden');
+                game.classList.add('hidden');
+                quiz.classList.add('hidden');
+                wordStats.classList.add('hidden');
+                if (startBtn) startBtn.focus();
+                return;
+            }
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
+    })();
+    </script>
   </div>
 </div> 
-  <script src="anglais2.js"></script>
 </body>
 </html>

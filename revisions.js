@@ -33,4 +33,4 @@ function toggleMode() {
 document.addEventListener('DOMContentLoaded', () => {
     toggleMode();
     updateHomeButton();
-});
+})();

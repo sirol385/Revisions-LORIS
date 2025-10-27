@@ -177,7 +177,6 @@ function toggleMode() {
         localStorage.setItem("modeNuit", isNuit);
     });
 }
-toggleMode();
 function isVercel() {
     return window.location.hostname.includes('vercel.app');
 }
@@ -190,4 +189,4 @@ function updateHomeButton() {
 document.addEventListener('DOMContentLoaded', () => {
     toggleMode();
     updateHomeButton();
-});
+})();

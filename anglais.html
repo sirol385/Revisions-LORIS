@@ -5,13 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anglais</title>
   <link rel="stylesheet" href="anglais.css" />
-<script>
-  document.getElementById("toggle-mode").addEventListener("click", function() {
-    document.body.classList.toggle("nuit");
-    this.classList.toggle("nuit");
-    this.textContent = this.classList.contains("nuit") ? "☀️" : "🌙";
-  });
-</script>
 </head>
 <body>
 <div id="app">
@@ -43,7 +36,34 @@
 </div> 
     <a href="../Accueil-LORIS/index.html" class="back-button">🏠</a>
     <a href="anglais.html" class="retour-button">⬅️</a>
-  </div>
-<script src="anglais.js"></script>
+  <script src="anglais.js"></script>
+  <script>
+  (function(){
+    const backBtn = document.querySelector('.retour-button');
+    const controls = document.querySelector('#controls');
+    const game = document.querySelector('#game');
+    const quiz = document.querySelector('#quiz');
+    const wordStats = document.querySelector('#word-stats');
+    const startBtn = document.querySelector('#start');
+    function isVisible(el) {
+      return el && !el.classList.contains('hidden');
+    }
+    if (!backBtn) return;
+    backBtn.addEventListener('click', function(e) {
+      if (isVisible(game) || isVisible(quiz) || isVisible(wordStats)) {
+        e.preventDefault();
+        controls.classList.remove('hidden');
+        game.classList.add('hidden');
+        quiz.classList.add('hidden');
+        wordStats.classList.add('hidden');
+        if (startBtn) startBtn.focus();
+        return;
+      }
+      e.preventDefault();
+      window.location.href = 'index.html';
+    });
+  })();
+  </script>
+</div>
 </body>
 </html>
