@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anglais</title>
+  <link rel="icon" type="image/png" href="anglais.png" id="favicon">
+  <link rel="stylesheet" href="anglais.css">
+</head>
+<body>
+  <header>
+    <h1>📕 Anglais</h1>
+    <nav>
+      <button data-tab="hippies">Hippies et Punks</button>
+      <button data-tab="verbes">Verbes Irréguliers</button>
+      <button data-tab="charles">Charles III</button>
+      <button data-tab="henry">Henry VIII</button>
+    </nav>
+    <button type="button" class="toggle-btn" id="toggle-mode">🌙</button>
+  </header>
+  <a href="index.html" class="retour-button">⬅️</a>
+  <main id="content"></main>
+  <script src="anglais.js"></script>
+  <div id="mentionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>📄 Mentions légales</h2>
+      <p><strong>Éditeur du site</strong><br>
+      <span class="contact-inline">Loris GOUHIER - lorisgouhier@gmail.com</span><br>
+      Site personnel sans but commercial, réalisé à des fins de présentation et de développement web.</p>
+      <p><strong>Hébergeur/Diffusion/Domaine</strong><br>
+      GitHub Inc, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>
+      Cloudflare Inc, 101 Townsend Street, San Francisco, CA 94107, États-Unis.<br>
+      OVH SAS, 2 Rue Kellermann, 59100 Roubaix, France.</p>
+      <p><strong>Propriété intellectuelle</strong><br>
+      L'ensemble du contenu présent sur ce site (textes, images, codes sources, etc) est la propriété exclusive de Loris GOUHIER.
+      Conformément à l'article L.122-4 du Code de la propriété intellectuelle,
+      toute reproduction, représentation, même partielle est interdite sans autorisation préalable.</p>
+      <p><strong>Données personnelles</strong><br>
+      Ce site ne collecte aucune donnée personnelle ni aucun cookie de suivi.<br>
+      GitHub et Cloudflare peuvent traiter votre adresse IP pour le fonctionnement et la sécurité du site.</p>
+    <p class="maj-line">Site web et mentions légales mis à jour le <b>03/11/2026</b>.</p>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 | Tous droits réservés | <a onclick="openModal()">Mentions légales</a></p>
+  </footer>
+</body>
+</html>
